@@ -2860,7 +2860,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-success {
+.btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
   --bs-btn-border-color: #0d6efd;
