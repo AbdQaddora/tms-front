@@ -11241,3 +11241,10 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+.avatar_img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
