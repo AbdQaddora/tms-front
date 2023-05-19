@@ -28,71 +28,80 @@
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="./login.html">Logout</a></li>
-                    <li><a class="dropdown-item" href="./trainee_edit.html">Edit Profile</a></li>
+                    <li><a class="dropdown-item" href="./edit_profile.html">Edit Profile</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
     <div id="layoutSidenav">
-
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt text-success"></i></div>
+                        <a class="nav-link" href="./index.html">
+                            <div class="sb-nav-link -icon"><i class="fas fa-tachometer-alt text-success"></i></div>
                             Dashboard
                         </a>
                         <hr class="sidebar-divider">
-                        <a class="nav-link" href="upload.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-upload text-success"></i></div>
-                            Upload
+                        <a class="nav-link" href="./Trainee_List.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-file-alt text-success"></i></div>
+                            Trainee List
                         </a>
-                        <a class="nav-link" href="apply-for-training.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap text-success"></i></div>
-                            Apply For Training
-                        </a>
-                        <a class="nav-link" href="attendance.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-calendar-check text-success"></i></div>
-                            Training Attendance
-                        </a>
-                        <a class="nav-link" href="request-meeting.html">
+                        <a class="nav-link" href="./Meetings_Schedule.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-video text-success"></i></div>
-                            Request Meeting
+                            Meetings Schedule
                         </a>
-                        <a class="nav-link" href="add_issue.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-warning text-success"></i></div>
-                            Issue
+                        <a class="nav-link" href="./NotificationsAndEmails.html">
+                            <div class="sb-nav-link-icon"><i class="far fa-solid fa-user text-success"></i></div>
+                            Emails
+                        </a>
+                        <a class="nav-link" href="./trainees.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-solid fa-user  text-success"></i></div>
+                            Trainee Profile
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as: <span class="text-warning">Trainee</span></div>
-                    Abd Qaddora
+                    <div class="small">Logged in as: <span class="text-warning">Advisor</span></div>
+                    Mohammed Raida
                 </div>
             </nav>
         </div>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">__Title__</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">__Title__</li>
-                    </ol>
-
-                    <!-- PAGE CONTENT -->
-                    <!-- section template -->
-                    <section class="mt-3 mb-3">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-bar me-1"></i>
-                                section title
-                            </div>
-                            <div class="card-body">
-                                <!-- section body -->
-                            </div>
+                    <h1 class="mt-4 mb-4"><span class="text-success">{{Advisor Name}}</span></h1>
+                    <form action="" class="mt-2 mb-4">
+                        <div class="form-group mb-2">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name">
                         </div>
-                    </section>
+                        
+                        <div class="form-group mb-2">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="phone">Phone number</label>
+                            <input type="text" class="form-control" id="phone">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="discipline">Discipline</label>
+                            <input type="text" class="form-control" id="discipline">
+                        </div>
+
+                        <div class="h-100 d-flex align-items-end pb-2 justify-content-end">
+                            <button type="button" class="btn btn-success pe-4 ps-4">Save</button>
+                            <button type="button" class="btn btn-danger ms-2">Delete</button>
+                        </div>
+                    </form>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
