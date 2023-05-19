@@ -3,7 +3,7 @@
     * Copyright 2013-2023 Training management system
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
     */
-    // 
+// 
 // Scripts
 // 
 
@@ -23,4 +23,22 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
+
+    // change avatar image
+    const avatarImage = document.getElementById("user_avatar");
+    const avatarInput = document.getElementById("avatar_input");
+    if (avatarImage && avatarInput) {
+        avatarInput.addEventListener('change', (e) => {
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                const base64 = reader.result;
+                avatarImage.src = base64;
+            };
+
+            reader.readAsDataURL(avatarInput.files[0]);
+        })
+    }
 });
+
+
