@@ -13224,6 +13224,13 @@ body {
   opacity: 0.8;
 }
 
-.banner_input #banner_input-image[src=""]{
+.banner_input #banner_input-image[src=""] {
   display: none;
+}
+
+@media(max-width:720px) {
+  .banner_input {
+    max-width: unset;
+    width: 100%;
+  }
 }
