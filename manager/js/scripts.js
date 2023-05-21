@@ -39,6 +39,21 @@ window.addEventListener('DOMContentLoaded', event => {
             reader.readAsDataURL(avatarInput.files[0]);
         })
     }
+
+    // change banner image
+    const bannerInput = document.getElementById("banner_input");
+    const bannerImage = document.getElementById("banner_input-image");
+    if (bannerInput && bannerImage) {
+        bannerInput.addEventListener('change', (e) => {
+            const reader = new FileReader();
+            reader.onload = () => {
+                const base64 = reader.result;
+                bannerImage.src = base64;
+            };
+
+            reader.readAsDataURL(bannerInput.files[0]);
+        })
+    }
 });
 
 
