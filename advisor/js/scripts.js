@@ -45,19 +45,30 @@ window.addEventListener('DOMContentLoaded', event => {
     const notifications = document.getElementById("notifications");
     const notifications_count = document.getElementById("notifications_count");
     // mock data at first
-    let notifications_list = ["Hello World", "Hello World 2"];
+    let notifications_list = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, enim?",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, enim?",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, enim?"];
+    /*
+    
 
+    */
     let closeTimeOutId = null;
 
 
     if (notifications_bell && notifications && notifications_count) {
 
         const updateNotificationsCount = (count) => {
-            notifications_count.innerText = count > 99 ? "+99" : count;
+            console.log({ count })
+            if (count > 0) {
+                notifications_count.innerText = count > 99 ? "+99" : count;
+                notifications_count.classList.remove("d-none")
+            } else {
+                console.log("NO NOTIFICATIONS")
+                notifications_count.classList.add("d-none")
+            }
         }
 
         const appendNotification = (notification_text) => {
-            updateNotificationsCount(notifications_list.length);
             updateNotificationsCount(notifications_list.length);
 
             const notificationItem = document.createElement("div");
