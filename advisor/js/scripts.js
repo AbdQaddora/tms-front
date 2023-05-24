@@ -39,6 +39,26 @@ window.addEventListener('DOMContentLoaded', event => {
             reader.readAsDataURL(avatarInput.files[0]);
         })
     }
+
+    // toggle notifications
+    const notifications_bell = document.getElementById("notifications_bell");
+    const notifications = document.getElementById("notifications");
+    let closeTimeOutId = null;
+
+    if (notifications_bell && notifications) {
+        notifications_bell.addEventListener('click', (e) => {
+            notifications.classList.toggle('active');
+            if (closeTimeOutId) {
+                clearTimeout(closeTimeOutId);
+                closeTimeOutId = null;
+            }
+            
+            closeTimeOutId = setTimeout(() => {
+                notifications.classList.remove('active');
+                closeTimeOutId = null;
+            }, 10000)
+        })
+    }
 });
 
 
