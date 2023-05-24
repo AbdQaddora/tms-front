@@ -13312,3 +13312,13 @@ body {
 .notification_item_with_img>img {
   border-radius: 4px;
 }
+
+@media(max-width:720px) {
+  .notifications {
+    width: 350px;
+  }
+
+  .notifications.active{
+    inset-inline-end: -60px;
+  }
+}
